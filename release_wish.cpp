@@ -171,7 +171,7 @@ void test_light()
 void test_mix(size_t avatar = 3, size_t light = 1, size_t mat_a = 0, size_t mat_l = 0, size_t circle = 10'0000, 
     bool guarantee_flag_a = false,bool guarantee_flag_l = false)
 {
-    double p[190]{ 0 };
+    double p[1000]{ 0 };
 
     size_t count = 0;
     for (int i = 0; i < circle; i++)
