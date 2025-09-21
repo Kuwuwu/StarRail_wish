@@ -168,10 +168,12 @@ void test_light()
 
     printf("%lf\n", count);
 }
+
+double* p = nullptr;
 void test_mix(size_t avatar = 3, size_t light = 1, size_t mat_a = 0, size_t mat_l = 0, size_t circle = 10'0000, 
     bool guarantee_flag_a = false,bool guarantee_flag_l = false)
 {
-    double p[1000]{ 0 };
+    p = new double[10000]();
 
     size_t count = 0;
     for (int i = 0; i < circle; i++)
@@ -272,6 +274,8 @@ int main()
     }
 
     test_mix(avatar, light, mat_a, mat_l, circle, guarantee_flag_a, guarantee_flag_l);
+
+    delete[]p;
 
     return 0;
 }
