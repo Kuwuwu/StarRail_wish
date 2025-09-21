@@ -1,25 +1,89 @@
-<div class="container">
-    <h1>崩坏星穹铁道抽卡模拟器</h1>
-    
-    
-    <div class="input-group">
-        <label for="avatar">需要角色数量:</label>
-        <input type="number" id="avatar" value="3" min="1">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数生成器 (0-100)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #e4edf5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        .number-display {
+            font-size: 4.5rem;
+            font-weight: bold;
+            color: #3498db;
+            margin: 20px 0;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        button:hover {
+            background: #2c80b9;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+        }
+        .info {
+            margin-top: 25px;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>随机数生成器</h1>
+        <p>生成 0 到 100 之间的随机整数</p>
+        
+        <div class="number-display" id="number">
+            0
+        </div>
+        
+        <button id="generateBtn">生成随机数</button>
+        
+        <div class="info">
+            本应用使用纯 JavaScript 实现，无需网络连接<br>
+            适用于 GitHub Pages 等静态网站托管服务
+        </div>
     </div>
-    
-    <div class="input-group">
-        <label for="mat">角色池垫了多少抽:</label>
-        <input type="number" id="mat" value="0" min="0">
-    </div>
-    
-    <div class="input-group">
-        <label for="guarantee">
-            <input type="checkbox" id="guarantee">
-            角色池大保底?
-        </label>
-    </div>
-    
-    <button onclick="simulate()">模拟抽卡</button>
-    
-    <div id="result" class="result"></div>
-</div>
+
+    <!-- 关键：将JS文件放在body底部 -->
+    <script src="js/random-generator.js"></script>
+</body>
+</html>
