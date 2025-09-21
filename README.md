@@ -1,6 +1,9 @@
 在线网页https://kuwuwu.github.io/StarRail_wish/  
 
 页面展示  
+<img width="807" height="1125" alt="image" src="https://github.com/user-attachments/assets/8dabc4b4-fc40-4887-aae7-8a1b063b79de" />
+
+程序页面
 
 要抽的限定角色数量：[填写数量]
 
