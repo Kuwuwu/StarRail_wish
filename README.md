@@ -1,7 +1,7 @@
 在线网页https://kuwuwu.github.io/StarRail_wish/  
 
 页面展示  
-<img width="807" height="1125" alt="image" src="https://github.com/user-attachments/assets/8dabc4b4-fc40-4887-aae7-8a1b063b79de" />
+<img width="957" height="1257" alt="image" src="https://github.com/user-attachments/assets/7a75f1df-96d6-41e2-ad99-0d1d9fb54134" />
 
 程序页面
 
