@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 角色池抽卡逻辑
     function SR_Logic_avatar(num, mat = 0, guarantee_flag = false) {
+        // 如果num为0或负数，直接返回0（不需要抽卡）
+        if (num <= 0) return 0;
+        
         let special = 0;            // 限定金
         let ordinary = 0;           // 常驻金
         let probability_number = 6; // 概率数
@@ -61,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 光锥池抽卡逻辑
     function SR_Logic_light(num, mat = 0, guarantee_flag = false) {
+        // 如果num为0或负数，直接返回0（不需要抽卡）
+        if (num <= 0) return 0;
+        
         let special = 0;            // 限定光锥
         let ordinary = 0;           // 常驻光锥
         let probability_number = 9; // 概率数
@@ -127,14 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const guarantee_flag_l = document.getElementById('guarantee_l').value === 'true';
         const circle = parseInt(document.getElementById('circle').value);
         
-        // 验证输入
-        if (avatar <= 0 || light <= 0 || mat_a < 0 || mat_l < 0 || circle <= 0) {
-            resultOutput.textContent = "错误: 请输入有效的数字 (角色/光锥数量≥1, 垫抽数≥0)";
+        // 验证输入：至少有一个数量>0，且所有数值有效
+        if ((avatar <= 0 && light <= 0) || mat_a < 0 || mat_l < 0 || circle <= 0) {
+            resultOutput.textContent = "错误: 请输入有效的数字 (至少需要1个角色或光锥，垫抽数≥0)";
             return;
         }
         
         // 显示加载状态
-        resultOutput.textContent = "正在模拟... (10万次样本量)";
+        resultOutput.textContent = "正在模拟... ";
         
         // 执行10万次模拟
         const startTime = performance.now();
