@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 执行10万次模拟
         const startTime = performance.now();
-        const p = new Array(1000).fill(0);
+        const p = new Array(10000).fill(0);  // 修改：数组长度从1000改为10000
         const max = Math.floor((avatar * 180 + light * 160) / 10);
         
         for (let i = 0; i < circle; i++) {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let cumulative = 0;
         let output = "";
         
-        for (let i = 0; i < max; i++) {
+        for (let i = 0; i < p.length; i++) {  // 修改：遍历整个10000长度的数组
             if (p[i] === 0) continue;
             
             cumulative += (p[i] / circle) * 100;
