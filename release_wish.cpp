@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #if 1
 #include <stdio.h>
@@ -16,6 +16,10 @@ size_t SR_Logic_avatar(size_t num, size_t mat = 0, bool guarantee_flag = 0) //(�
     size_t ordinary = 0;           // 常驻金
     size_t probability_number = 6; // 概率数
     size_t flag = mat;//抽卡标记
+    if (flag >= 74)
+    {
+        probability_number += (flag - 73) * 60;
+    }
 
     size_t count = mat;
     while (special < num)//进入抽卡逻辑
@@ -80,6 +84,10 @@ size_t SR_Logic_light(size_t num, size_t mat = 0, bool guarantee_flag = 0)//(需
     size_t ordinary = 0;           // 常驻金
     size_t probability_number = 9; // 概率数
     size_t flag = mat;//抽卡标记   
+    if (flag >= 66)
+    {
+        probability_number += (flag - 66) * 70;
+    }
 
     size_t count = mat;
     while (special < num)//进入抽卡逻辑
