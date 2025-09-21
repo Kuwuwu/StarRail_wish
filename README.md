@@ -1,3 +1,7 @@
+在线网页https://kuwuwu.github.io/StarRail_wish/  
+
+页面展示  
+
 要抽的限定角色数量：[填写数量]
 
 需要专光数量：[填写数量]
